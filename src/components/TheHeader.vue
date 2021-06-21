@@ -1,12 +1,27 @@
 <template>
   <header class="header col-12">
-    <nav class="header__nav">
-      <div class="header__nav--contact">
+    <nav class="header__nav d-flex justify-content-between">
+      <div class="header__nav--left">
         <img :src="phoneImg" alt="blue phone" class="blue-phone" />
         <div class="header__nav--btns">
           <the-button class="signup-btn">ثبت نام</the-button>
           <the-button class="login-btn">ورود</the-button>
         </div>
+      </div>
+      <div class="header__nav--right">
+        <a href="#" class="nav-links ms-1">انتخاب استاد</a>
+
+        <div class="arrow-down-container">
+          <a href="#" class="nav-links ms-1">زبان ها</a>
+          <span class="arrow-down">⌄</span>
+        </div>
+        <div class="arrow-down-container">
+          <a href="#" class="nav-links ms-1">اهداف یادگیری</a>
+          <span class="arrow-down">⌄</span>
+        </div>
+        <a href="#" class="nav-links">جذب استاد</a>
+        <a href="#" class="nav-links">خدمت سازمانی</a>
+        <img :src="logoImg" alt="Oteacher Logo" class="main-logo" />
       </div>
     </nav>
   </header>
@@ -19,16 +34,23 @@ export default {
   data() {
     return {
       phoneImg: require("../assets/blue-phone.svg"),
+      logoImg: require("../assets/oteacher-logo.png"),
     };
   },
   methods: {},
 };
 </script>
 <style scoped>
-.header__nav--contact {
+.header {
+  padding: 2.3rem 1rem 1rem 1rem;
+  /* box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.2); */
+}
+.header__nav {
+  margin: 0 2.5rem 2.5rem 2.5rem;
+}
+.header__nav--left {
   display: flex;
   align-items: center;
-  margin: 2.5rem;
 }
 .blue-phone {
   cursor: pointer;
@@ -56,5 +78,31 @@ export default {
 .login-btn:hover {
   border-radius: 9px;
   background-color: rgba(63, 158, 255, 0.2);
+}
+.main-logo {
+  width: 11rem;
+  margin-right: 5rem;
+  cursor: pointer;
+}
+.nav-links {
+  text-decoration: none;
+  color: rgb(80, 80, 80);
+  font-size: 1.3rem;
+  margin: 0 1.5rem;
+  transition: all 0.3s;
+}
+.nav-links:hover {
+  color: #3f9eff;
+}
+
+.arrow-down {
+  width: 1rem;
+  position: relative;
+  font-size: 2.3rem;
+}
+
+.arrow-down-container {
+  display: inline;
+  cursor: pointer;
 }
 </style>
