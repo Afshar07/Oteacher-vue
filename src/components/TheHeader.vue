@@ -61,7 +61,6 @@ export default {
 }
 .signup-btn {
   border: 1px solid #3f9eff;
-  border-radius: 9px;
   color: #3f9eff;
   width: 10rem;
   transition: all 0.3s;
