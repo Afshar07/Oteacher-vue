@@ -5,13 +5,16 @@
   </div>
 </template>
 <style scoped>
+.divider-container {
+  width: 100%;
+}
 hr {
   border: 2px solid #87e9ff;
 }
 .divider-1 {
-  width: 100%;
+  width: 130%;
 }
 .divider-2 {
-  width: 70%;
+  width: 90%;
 }
 </style>
