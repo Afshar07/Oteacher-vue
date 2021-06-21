@@ -12,4 +12,7 @@
   border: none;
   border-radius: 9px;
 }
+.main-btn:focus {
+  outline: none;
+}
 </style>
