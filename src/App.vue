@@ -6,6 +6,7 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import OteacherIntro from "./components/OteacherIntro.vue";
+import data from "./data.json";
 export default {
   created() {
     window.addEventListener("scroll", this.handleScroll);
@@ -17,10 +18,11 @@ export default {
   components: { TheHeader, OteacherIntro },
   data() {
     return {
+      countryData: data,
       isSticky: false,
     };
   },
-  methods: {
+  ds: {
     handleScroll() {
       if (window.scrollY > 10) {
         this.isSticky = true;
