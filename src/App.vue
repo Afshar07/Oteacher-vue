@@ -31,12 +31,14 @@
       <p class="show-text">دیگر زبان‌ها</p>
     </div>
   </div>
+  <learning-steps></learning-steps>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import OteacherIntro from "./components/OteacherIntro.vue";
 import SupportedLangs from "./components/SupportedLangs.vue";
+import LearningSteps from "./components/LearningSteps.vue";
 import data from "./data.json";
 export default {
   created() {
@@ -46,7 +48,7 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   name: "App",
-  components: { TheHeader, OteacherIntro, SupportedLangs },
+  components: { TheHeader, OteacherIntro, SupportedLangs, LearningSteps },
   data() {
     return {
       countryData: data,
@@ -117,7 +119,7 @@ body {
   box-shadow: 0 0.1rem 0.8rem rgb(95, 175, 238, 0.1);
 }
 .supported-langs {
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
   padding: 0 4rem;
 }
 .load-container {
