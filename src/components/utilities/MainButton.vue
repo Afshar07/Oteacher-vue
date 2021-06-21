@@ -9,6 +9,7 @@
   background-color: transparent;
   padding: 1rem 2rem;
   font-size: 1.4rem;
+  border: none;
   border-radius: 9px;
 }
 </style>
