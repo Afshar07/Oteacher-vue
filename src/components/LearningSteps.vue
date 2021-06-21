@@ -9,8 +9,9 @@
         <teachers-name :img="teacher1Pic" :name="teacher1Name"></teachers-name>
         <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
       </div>
-      <teacher-rated></teacher-rated>
-      <session-calendar></session-calendar>
+      <teacher-rated class="teacher-rated"></teacher-rated>
+      <session-calendar class="session-calendar"></session-calendar>
+      <session-reservation></session-reservation>
     </div>
   </div>
 </template>
@@ -19,8 +20,14 @@
 import TeachersName from "./animated/TeachersName.vue";
 import TeacherRated from "./animated/TeacherRated.vue";
 import SessionCalendar from "./animated/SessionCalendar.vue";
+import SessionReservation from "./animated/SessionReservation.vue";
 export default {
-  components: { TeachersName, TeacherRated, SessionCalendar },
+  components: {
+    TeachersName,
+    TeacherRated,
+    SessionCalendar,
+    SessionReservation,
+  },
   data() {
     return {
       teacher1Pic: require("../assets/teacher1.png"),
@@ -45,5 +52,17 @@ export default {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-name,
+.teacher-rated,
+.session-calendar {
+  filter: blur(0.25rem);
+  transition: all 0.4s;
+}
+.teacher-name:hover,
+.teacher-rated:hover,
+.session-calendar:hover {
+  filter: blur(0);
 }
 </style>
