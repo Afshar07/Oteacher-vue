@@ -56,6 +56,6 @@ body {
   top: 0;
 }
 .nav-sticky {
-  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 0.1rem 0.8rem rgb(95, 175, 238, 0.1);
 }
 </style>
