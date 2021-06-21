@@ -1,11 +1,42 @@
 <template>
   <the-header class="header-nav" :class="stickyNav"></the-header>
   <oteacher-intro></oteacher-intro>
+  <div class="supported-langs d-flex flex-wrap" dir="rtl" v-if="loadMore">
+    <supported-langs
+      v-for="country in countryData"
+      :key="country.id"
+      :name="country.name"
+      :flag="country.flag"
+    ></supported-langs>
+    <div
+      class="load-container d-flex flex-column align-items-center"
+      @click="loadMoreFlags"
+    >
+      <img :src="loadMoreImg" alt="" class="load-img" />
+      <p class="show-text">مخفی کردن</p>
+    </div>
+  </div>
+  <div class="supported-langs d-flex flex-wrap col-12" dir="rtl" v-else>
+    <supported-langs
+      v-for="country in countryData.slice(0, 8)"
+      :key="country.id"
+      :name="country.name"
+      :flag="country.flag"
+    ></supported-langs>
+    <div
+      class="load-container d-flex flex-column align-items-center"
+      @click="loadMoreFlags"
+    >
+      <img :src="loadMoreImg" alt="" class="load-img" />
+      <p class="show-text">دیگر زبان‌ها</p>
+    </div>
+  </div>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import OteacherIntro from "./components/OteacherIntro.vue";
+import SupportedLangs from "./components/SupportedLangs.vue";
 import data from "./data.json";
 export default {
   created() {
@@ -15,20 +46,25 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   name: "App",
-  components: { TheHeader, OteacherIntro },
+  components: { TheHeader, OteacherIntro, SupportedLangs },
   data() {
     return {
       countryData: data,
       isSticky: false,
+      loadMore: false,
+      loadMoreImg: require("./assets/flags/showmore.svg"),
     };
   },
-  ds: {
+  methods: {
     handleScroll() {
       if (window.scrollY > 10) {
         this.isSticky = true;
       } else {
         this.isSticky = false;
       }
+    },
+    loadMoreFlags() {
+      this.loadMore = !this.loadMore;
     },
   },
   computed: {
@@ -72,8 +108,6 @@ body {
   height: 100%;
 }
 .header-nav {
-  /* position: sticky; */
-  /* top: 5px;   */
   margin-bottom: 10rem;
   background-color: #fff;
 }
@@ -81,5 +115,26 @@ body {
   position: sticky;
   top: 0;
   box-shadow: 0 0.1rem 0.8rem rgb(95, 175, 238, 0.1);
+}
+.supported-langs {
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+.load-container {
+  /* margin-left: 85%; */
+  width: 10rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.load-container:hover {
+  box-shadow: 0px 2px 10px 2px rgb(95, 175, 238, 0.1);
+}
+.load-img {
+  width: 4rem;
+  margin-top: 2rem;
+}
+.show-text {
+  margin-top: 1rem;
 }
 </style>
