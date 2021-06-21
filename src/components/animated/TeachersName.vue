@@ -1,8 +1,8 @@
 <template>
-  <div class="teacher-container">
+  <div class="teacher-container" dir="rtl">
     <div class="name-pic d-flex align-items-center">
-      <p class="teacher-name">{{ name }}</p>
       <img :src="img" alt="Teacher pic" class="teacher-pic" />
+      <p class="teacher-name">{{ name }}</p>
     </div>
     <main-dividers dir="rtl"></main-dividers>
   </div>
@@ -23,7 +23,7 @@ export default {
 }
 .teacher-pic {
   width: 6rem;
-  margin: 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 .teacher-name {
   font-size: 1.3rem;
