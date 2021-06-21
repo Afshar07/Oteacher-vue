@@ -43,7 +43,6 @@ export default {
 <style scoped>
 .header {
   padding: 2.3rem 1rem 1rem 1rem;
-  /* box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.2); */
 }
 .header__nav {
   margin: 0 2.5rem 2.5rem 2.5rem;
