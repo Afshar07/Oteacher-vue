@@ -5,8 +5,10 @@
       consequuntur sit molestiae enim? Sapiente harum sit officiis distinctio!
     </div>
     <div class="right-section col-7">
-      <teachers-name :img="teacher1Pic" :name="teacher1Name"></teachers-name>
-      <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
+      <div class="teacher-name">
+        <teachers-name :img="teacher1Pic" :name="teacher1Name"></teachers-name>
+        <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
+      </div>
     </div>
   </div>
 </template>
@@ -32,5 +34,13 @@ export default {
 .right-section {
   height: 100vh;
   background: url("../assets/orbit.svg") no-repeat center right;
+}
+.teacher-name {
+    width: 26rem;
+    padding: 1rem 2rem 0 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
 }
 </style>
