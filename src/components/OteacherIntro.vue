@@ -5,10 +5,8 @@
         آموزش آنلاین زبان در اُتیچر
         <br />
 
-        <mark class="highlighted">
-          همیشه و همه‌جا،جستجو و
-        </mark>
-        با استادی که دوست داری
+        <mark class="highlighted"> همیشه و همه‌جا </mark>
+        ، با استادی که دوست داری
       </h1>
       <div class="description">
         <p class="description-text">
@@ -34,7 +32,7 @@
             <img :src="playIcon" alt="Play Icon" class="play-icon" />
           </span>
           <p class="desc-text">
-            کلاس‌های زنده تصویری و تعاملی؛ تک‌نفره و گروهی
+            کلاس های زنده تصویری و تعاملی؛ تک‌نفره و گروهی
           </p>
         </div>
       </div>
@@ -67,13 +65,19 @@ export default {
 }
 .heading-primary {
   margin-bottom: 3rem;
+  font-weight: 1000;
+  line-height: 5rem;
+  font-size: 3.1rem;
 }
 .highlighted {
-  padding-bottom: 1.7rem;
+  color: inherit;
+  padding-bottom: 1rem;
   background-color: transparent;
   background-image: url("../assets/text-marker.svg");
   background-repeat: no-repeat;
   background-position: bottom;
+  font-weight: bold;
+  margin: 0;
 }
 .description {
   border-right: 3px solid #d1d6e2;
@@ -102,10 +106,12 @@ export default {
 }
 .desc-text {
   font-size: 1.4rem;
+  font-weight: 300;
 }
 .magnifier-container,
 .play-icon-container {
   position: relative;
+  margin-left: 0;
 }
 .magnifier-container::before,
 .play-icon-container::before {
