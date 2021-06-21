@@ -10,6 +10,7 @@
         <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
       </div>
       <teacher-rated></teacher-rated>
+      <session-calendar></session-calendar>
     </div>
   </div>
 </template>
@@ -17,8 +18,9 @@
 <script>
 import TeachersName from "./animated/TeachersName.vue";
 import TeacherRated from "./animated/TeacherRated.vue";
+import SessionCalendar from "./animated/SessionCalendar.vue";
 export default {
-  components: { TeachersName, TeacherRated },
+  components: { TeachersName, TeacherRated, SessionCalendar },
   data() {
     return {
       teacher1Pic: require("../assets/teacher1.png"),
