@@ -6,6 +6,7 @@
     </div>
     <div class="right-section col-7">
       <teachers-name :img="teacher1Pic" :name="teacher1Name"></teachers-name>
+      <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
     </div>
   </div>
 </template>
@@ -17,7 +18,9 @@ export default {
   data() {
     return {
       teacher1Pic: require("../assets/teacher1.png"),
+      teacher2Pic: require("../assets/teacher2.png"),
       teacher1Name: "استاد نگین معتضدی",
+      teacher2Name: "استاد محمد عمرانی",
     };
   },
 };
