@@ -11,7 +11,7 @@
       </div>
       <teacher-rated class="teacher-rated"></teacher-rated>
       <session-calendar class="session-calendar"></session-calendar>
-      <session-reservation></session-reservation>
+      <session-reservation class="session-reservation"></session-reservation>
     </div>
   </div>
 </template>
@@ -56,13 +56,15 @@ export default {
 
 .teacher-name,
 .teacher-rated,
-.session-calendar {
+.session-calendar,
+.session-reservation {
   filter: blur(0.25rem);
   transition: all 0.4s;
 }
 .teacher-name:hover,
 .teacher-rated:hover,
-.session-calendar:hover {
+.session-calendar:hover,
+.session-reservation:hover {
   filter: blur(0);
 }
 </style>
