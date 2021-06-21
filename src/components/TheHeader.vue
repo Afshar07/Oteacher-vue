@@ -87,7 +87,7 @@ export default {
   text-decoration: none;
   color: rgb(80, 80, 80);
   font-size: 1.3rem;
-  margin: 0 1.5rem;
+  margin: 0 2rem;
   transition: all 0.3s;
 }
 .nav-links:hover {
