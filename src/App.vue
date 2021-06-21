@@ -136,5 +136,6 @@ body {
 }
 .show-text {
   margin-top: 1rem;
+  font-size: 1.3rem;
 }
 </style>

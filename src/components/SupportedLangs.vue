@@ -30,5 +30,6 @@ export default {
 }
 .country-name {
   margin-top: 1rem;
+  font-size: 1.3rem;
 }
 </style>
