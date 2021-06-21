@@ -6,15 +6,37 @@
         <br />
 
         <mark class="highlighted">
-          همیشه و همه‌جا،
+          همیشه و همه‌جا،جستجو و
         </mark>
-         با استادی که دوست داری
+        با استادی که دوست داری
       </h1>
       <div class="description">
         <p class="description-text">
           همسوترین استاد با اهداف و نیازهایت را از بین صدها استاد ارزیابی‌شده،
           انتخاب کن و در زمان‌های دلخواه، در کلاس زبان آنلاین شرکت کن
         </p>
+      </div>
+      <main-button class="main-btn">اولین جلسه را مهمان ما باش!</main-button>
+      <div class="desc-container">
+        <div class="first-desc d-flex">
+          <span class="magnifier-container ms-0"
+            ><img
+              :src="magnifierIcon"
+              alt="Magnifier Icon"
+              class="magnifier-icon"
+          /></span>
+          <p class="desc-text">
+            جستجو و یافتن سریع استاد با فیلترهای متنوع
+          </p>
+        </div>
+        <div class="second-desc d-flex">
+          <span class="play-icon-container">
+            <img :src="playIcon" alt="Play Icon" class="play-icon" />
+          </span>
+          <p class="desc-text">
+            کلاس‌های زنده تصویری و تعاملی؛ تک‌نفره و گروهی
+          </p>
+        </div>
       </div>
     </div>
     <div class="left-section col-6">
@@ -23,10 +45,14 @@
   </section>
 </template>
 <script>
+import MainButton from "./utilities/MainButton.vue";
 export default {
+  components: { MainButton },
   data() {
     return {
       introImg: require("../assets/mainintro.webp"),
+      magnifierIcon: require("../assets/search-outline.svg"),
+      playIcon: require("../assets/play-circle-outline.svg"),
     };
   },
 };
@@ -37,7 +63,7 @@ export default {
   direction: rtl;
 }
 .main-container {
-  margin: 3rem;
+  margin: 8rem;
 }
 .heading-primary {
   margin-bottom: 3rem;
@@ -52,6 +78,7 @@ export default {
 .description {
   border-right: 3px solid #d1d6e2;
   border-radius: 2px;
+  margin-bottom: 3rem;
 }
 .description-text {
   font-size: 1.5rem;
@@ -59,6 +86,37 @@ export default {
 }
 .main-img {
   width: 100%;
-
+}
+.main-btn {
+  background-image: linear-gradient(90deg, #378aff, #20b2ff);
+  color: #fff;
+  margin: 1rem;
+  height: 5rem;
+}
+.magnifier-icon,
+.play-icon {
+  width: 2.4rem;
+}
+.desc-container {
+  margin-top: 4rem;
+}
+.desc-text {
+  font-size: 1.4rem;
+}
+.magnifier-container,
+.play-icon-container {
+  position: relative;
+}
+.magnifier-container::before,
+.play-icon-container::before {
+  position: absolute;
+  top: 0.5rem;
+  right: -1rem;
+  content: " ";
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(32, 178, 255, 0.5);
+  border-radius: 50%;
+  z-index: -1;
 }
 </style>
