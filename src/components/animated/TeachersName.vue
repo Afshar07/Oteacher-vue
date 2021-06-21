@@ -1,10 +1,10 @@
 <template>
-  <div class="teacher-container" dir="rtl">
-    <div class="name-pic d-flex align-items-center">
-      <img :src="img" alt="Teacher pic" class="teacher-pic" />
-      <p class="teacher-name">{{ name }}</p>
+  <div class="teacher-container d-flex align-items-center" dir="rtl">
+    <img :src="img" alt="Teacher pic" class="teacher-pic" />
+    <div class="name-divide d-flex flex-column align-items-center">
+      <p class="teacher-name m-0">{{ name }}</p>
+      <main-dividers></main-dividers>
     </div>
-    <main-dividers dir="rtl"></main-dividers>
   </div>
 </template>
 <script>
@@ -19,7 +19,7 @@ export default {
 </script>
 <style scoped>
 .teacher-container {
-  width: 20rem;
+  width: 100%;
 }
 .teacher-pic {
   width: 6rem;
