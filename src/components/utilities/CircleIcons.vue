@@ -1,5 +1,5 @@
 <template>
-  <span class="icon-container" :class="backgroundColor" :style="containerStyle"
+  <span class="icon-container" :style="containerStyle"
     ><img :src="iconUrl" alt="Magnifier Icon" class="icon"
   /></span>
 </template>

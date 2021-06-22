@@ -1,45 +1,10 @@
 <template>
   <the-header class="header-nav" :class="stickyNav"></the-header>
-  <oteacher-intro></oteacher-intro>
-  <div class="supported-langs d-flex flex-wrap" dir="rtl" v-if="loadMore">
-    <supported-langs
-      v-for="country in countryData"
-      :key="country.id"
-      :name="country.name"
-      :flag="country.flag"
-    ></supported-langs>
-    <div
-      class="load-container d-flex flex-column align-items-center"
-      @click="loadMoreFlags"
-    >
-      <img :src="loadMoreImg" alt="" class="load-img" />
-      <p class="show-text">مخفی کردن</p>
-    </div>
-  </div>
-  <div class="supported-langs d-flex flex-wrap col-12" dir="rtl" v-else>
-    <supported-langs
-      v-for="country in countryData.slice(0, 8)"
-      :key="country.id"
-      :name="country.name"
-      :flag="country.flag"
-    ></supported-langs>
-    <div
-      class="load-container d-flex flex-column align-items-center"
-      @click="loadMoreFlags"
-    >
-      <img :src="loadMoreImg" alt="" class="load-img" />
-      <p class="show-text">دیگر زبان‌ها</p>
-    </div>
-  </div>
-  <learning-steps></learning-steps>
+  <router-view></router-view>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader.vue";
-import OteacherIntro from "./components/OteacherIntro.vue";
-import SupportedLangs from "./components/SupportedLangs.vue";
-import LearningSteps from "./components/LearningSteps.vue";
-import data from "./data.json";
 export default {
   created() {
     window.addEventListener("scroll", this.handleScroll);
@@ -48,14 +13,16 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   name: "App",
-  components: { TheHeader, OteacherIntro, SupportedLangs, LearningSteps },
+  components: { TheHeader },
   data() {
     return {
-      countryData: data,
       isSticky: false,
-      loadMore: false,
-      loadMoreImg: require("./assets/flags/showmore.svg"),
     };
+  },
+  computed: {
+    stickyNav() {
+      return this.isSticky ? "nav-sticky" : "";
+    },
   },
   methods: {
     handleScroll() {
@@ -64,14 +31,6 @@ export default {
       } else {
         this.isSticky = false;
       }
-    },
-    loadMoreFlags() {
-      this.loadMore = !this.loadMore;
-    },
-  },
-  computed: {
-    stickyNav() {
-      return this.isSticky ? "nav-sticky" : "";
     },
   },
 };
