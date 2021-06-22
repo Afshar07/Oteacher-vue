@@ -108,6 +108,7 @@ html {
 body {
   box-sizing: border-box;
   height: 100%;
+  width: 100%;
 }
 .header-nav {
   margin-bottom: 10rem;
