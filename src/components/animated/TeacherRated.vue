@@ -29,7 +29,6 @@ export default {
 </script>
 <style scoped>
 .rated-container {
-  margin: 2rem;
   padding: 2rem;
   width: 25rem;
   background-color: #fff;
