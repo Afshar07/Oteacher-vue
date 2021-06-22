@@ -108,7 +108,6 @@ html {
 body {
   box-sizing: border-box;
   height: 100%;
-  width: 100%;
 }
 .header-nav {
   margin-bottom: 10rem;
@@ -124,7 +123,6 @@ body {
   padding: 0 4rem;
 }
 .load-container {
-  /* margin-left: 85%; */
   width: 10rem;
   border-radius: 10px;
   transition: all 0.3s;
