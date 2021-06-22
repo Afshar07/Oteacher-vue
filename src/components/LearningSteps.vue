@@ -44,14 +44,32 @@ export default {
 }
 .right-section {
   height: 100vh;
-  background: url("../assets/orbit.svg") no-repeat center right;
+  background: url("../assets/orbit.svg") no-repeat 20rem 10rem;
+  position: relative;
 }
 .teacher-name {
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
   width: 26rem;
   padding: 1rem 2rem 0 2rem;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.teacher-rated {
+  position: absolute;
+  top: 8rem;
+  right: 0;
+}
+.session-reservation {
+  position: absolute;
+  top: 31rem;
+  right: -1rem;
+}
+.session-calendar {
+  position: absolute;
+  top: 43rem;
 }
 
 .teacher-name,
