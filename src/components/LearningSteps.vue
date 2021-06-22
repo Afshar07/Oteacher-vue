@@ -1,8 +1,23 @@
 <template>
   <div class="learning-container d-flex">
-    <div class="left-section col-md-5 col-sm-12">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam fuga nam,
-      consequuntur sit molestiae enim? Sapiente harum sit officiis distinctio!
+    <div class="left-section col-md-5 col-sm-12 me-5" dir="rtl">
+      <h1 class="heading-primary">
+        <mark class="highlighted">یادگیری آنلاین زبان </mark>
+        <br />
+        <span class="heading-primary-second">
+          با سه گام کوتاه آغاز می‌شود
+        </span>
+      </h1>
+      <div class="three-steps-container mt-5">
+        <steps-to-start
+          v-for="step in stepsData"
+          :key="step.id"
+          :title="step.title"
+          :text="step.text"
+          :bgColor="step.color"
+          :iconUrl="step.icon"
+        ></steps-to-start>
+      </div>
     </div>
     <div class="right-section col-md-7">
       <div class="teacher-name">
@@ -21,15 +36,19 @@ import TeachersName from "./animated/TeachersName.vue";
 import TeacherRated from "./animated/TeacherRated.vue";
 import SessionCalendar from "./animated/SessionCalendar.vue";
 import SessionReservation from "./animated/SessionReservation.vue";
+import StepsToStart from "./StepsToStart.vue";
+import steps from "../steps.json";
 export default {
   components: {
     TeachersName,
     TeacherRated,
     SessionCalendar,
     SessionReservation,
+    StepsToStart,
   },
   data() {
     return {
+      stepsData: steps,
       teacher1Pic: require("../assets/teacher1.png"),
       teacher2Pic: require("../assets/teacher2.png"),
       teacher1Name: "استاد نگین معتضدی",
@@ -83,14 +102,19 @@ export default {
 .session-calendar,
 .session-reservation {
   filter: blur(0.25rem);
-  transition: all 0.4s;
 }
 .teacher-name:hover,
 .teacher-rated:hover,
 .session-calendar:hover,
 .session-reservation:hover {
-  filter: blur(0);
+  filter: blur(0) !important;
+  transition: all 0.4s !important;
 }
+.heading-primary {
+  font-weight: bold;
+  line-height: 4.3rem;
+}
+
 @keyframes up-down {
   0% {
     transform: translateY(0);
