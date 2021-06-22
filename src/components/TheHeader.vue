@@ -43,11 +43,10 @@ export default {
 <style scoped>
 .header {
   padding: 2.3rem 1rem 1rem 1rem;
-  margin-bottom: 5rem;
   z-index: 100;
 }
 .header__nav {
-  margin: 0 2.5rem 1rem 2.5rem;
+  margin: 0 2.5rem 0 2.5rem;
 }
 .header__nav--left {
   display: flex;
