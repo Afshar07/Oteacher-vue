@@ -31,7 +31,7 @@ export default {
   direction: rtl;
   position: relative;
   background-color: #fff;
-  width: 33.5rem;
+  width: 29.5rem;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   border-radius: 20px;
@@ -46,7 +46,7 @@ export default {
   top: -1rem;
 }
 .calendar-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   word-spacing: -0.4rem;
   margin-left: 4rem;
 }

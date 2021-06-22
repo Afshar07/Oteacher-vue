@@ -19,7 +19,7 @@
         ></steps-to-start>
       </div>
     </div>
-    <div class="right-section col-md-7">
+    <div class="right-section col-md-6 me-5">
       <div class="teacher-name">
         <teachers-name :img="teacher1Pic" :name="teacher1Name"></teachers-name>
         <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
@@ -86,14 +86,15 @@ export default {
 }
 .session-reservation {
   position: absolute;
-  top: 31rem;
-  right: -1rem;
+  top: 43rem;
+  left: 4rem;
   animation: right-left 6s ease infinite, removeBlur 13s ease infinite;
 }
 .session-calendar {
   position: absolute;
-  top: 43rem;
-  left: 4rem;
+  top: 33rem;
+  right: -4rem;
+
   animation: left-right 6s ease infinite, removeBlur 15s ease 7s infinite;
 }
 
