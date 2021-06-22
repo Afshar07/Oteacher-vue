@@ -26,9 +26,10 @@
           </p>
         </div>
         <div class="second-desc d-flex">
-          <span class="play-icon-container">
-            <img :src="playIcon" alt="Play Icon" class="play-icon" />
-          </span>
+          <circle-icons
+            :iconUrl="playIcon"
+            :bgColor="'#20b2ff80'"
+          ></circle-icons>
           <p class="desc-text">
             کلاس های زنده تصویری و تعاملی؛ تک‌نفره و گروهی
           </p>
