@@ -69,16 +69,6 @@ export default {
   line-height: 5rem;
   font-size: 3.1rem;
 }
-.highlighted {
-  color: inherit;
-  padding-bottom: 1rem;
-  background-color: transparent;
-  background-image: url("../assets/text-marker.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  font-weight: bold;
-  margin: 0;
-}
 .description {
   border-right: 3px solid #d1d6e2;
   border-radius: 2px;
@@ -124,5 +114,17 @@ export default {
   background-color: #20b2ff80;
   border-radius: 50%;
   z-index: -1;
+}
+</style>
+<style>
+.highlighted {
+  color: inherit;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  background-image: url("../assets/text-marker.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-weight: bold;
+  margin: 0;
 }
 </style>
