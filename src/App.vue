@@ -1,5 +1,5 @@
 <template>
-  <the-header class="header-nav" :class="stickyNav"></the-header>
+  <the-header class="header-nav m-0" :class="stickyNav"></the-header>
   <router-view></router-view>
 </template>
 
