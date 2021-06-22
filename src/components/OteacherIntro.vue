@@ -17,12 +17,10 @@
       <main-button class="main-btn">اولین جلسه را مهمان ما باش!</main-button>
       <div class="desc-container">
         <div class="first-desc d-flex">
-          <span class="magnifier-container ms-0"
-            ><img
-              :src="magnifierIcon"
-              alt="Magnifier Icon"
-              class="magnifier-icon"
-          /></span>
+          <circle-icons
+            :iconUrl="magnifierIcon"
+            :bgColor="'#20b2ff80'"
+          ></circle-icons>
           <p class="desc-text">
             جستجو و یافتن سریع استاد با فیلترهای متنوع
           </p>
@@ -44,8 +42,9 @@
 </template>
 <script>
 import MainButton from "./utilities/MainButton.vue";
+import CircleIcons from "./utilities/CircleIcons.vue";
 export default {
-  components: { MainButton },
+  components: { MainButton, CircleIcons },
   data() {
     return {
       introImg: require("../assets/mainintro.webp"),
@@ -121,7 +120,7 @@ export default {
   content: " ";
   width: 2.5rem;
   height: 2.5rem;
-  background-color: rgba(32, 178, 255, 0.5);
+  background-color: #20b2ff80;
   border-radius: 50%;
   z-index: -1;
 }
