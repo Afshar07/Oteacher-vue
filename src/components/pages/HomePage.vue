@@ -1,6 +1,10 @@
 <template>
-  <oteacher-intro></oteacher-intro>
-  <div class="supported-langs d-flex flex-wrap" dir="rtl" v-if="loadMore">
+  <oteacher-intro class="col-md-12 col-lg-12"></oteacher-intro>
+  <div
+    class="supported-langs d-flex flex-wrap col-md-12 col-lg-12"
+    dir="rtl"
+    v-if="loadMore"
+  >
     <supported-langs
       v-for="country in countryData"
       :key="country.id"
@@ -15,7 +19,11 @@
       <p class="show-text">مخفی کردن</p>
     </div>
   </div>
-  <div class="supported-langs d-flex flex-wrap col-12" dir="rtl" v-else>
+  <div
+    class="supported-langs d-flex flex-wrap col-12 col-md-12"
+    dir="rtl"
+    v-else
+  >
     <supported-langs
       v-for="country in countryData.slice(0, 8)"
       :key="country.id"
@@ -30,7 +38,7 @@
       <p class="show-text">دیگر زبان‌ها</p>
     </div>
   </div>
-  <learning-steps></learning-steps>
+  <learning-steps class="col-md-9"></learning-steps>
 </template>
 <script>
 import OteacherIntro from "../OteacherIntro.vue";
@@ -57,6 +65,13 @@ export default {
       this.loadMore = !this.loadMore;
     },
   },
-
 };
 </script>
+
+<style scoped>
+.supported-langs {
+  margin-top: 8rem;
+  margin-left: 0;
+  margin-right: 0 !important;
+}
+</style>
