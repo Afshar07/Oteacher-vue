@@ -1,44 +1,44 @@
 <template>
   <section class="main-container d-flex">
-    <div class="right-section col-6">
-      <h1 class="heading-primary">
-        آموزش آنلاین زبان در اُتیچر
-        <br />
-
-        <mark class="highlighted"> همیشه و همه‌جا </mark>
-        ، با استادی که دوست داری
-      </h1>
-      <div class="description">
-        <p class="description-text">
-          همسوترین استاد با اهداف و نیازهایت را از بین صدها استاد ارزیابی‌شده،
-          انتخاب کن و در زمان‌های دلخواه، در کلاس زبان آنلاین شرکت کن
-        </p>
-      </div>
-      <main-button class="main-btn">اولین جلسه را مهمان ما باش!</main-button>
-      <div class="desc-container">
-        <div class="first-desc d-flex">
-          <circle-icons
-            :iconUrl="magnifierIcon"
-            :bgColor="'#20b2ff80'"
-          ></circle-icons>
-          <p class="desc-text">
-            جستجو و یافتن سریع استاد با فیلترهای متنوع
-          </p>
-        </div>
-        <div class="second-desc d-flex">
-          <circle-icons
-            :iconUrl="playIcon"
-            :bgColor="'#20b2ff80'"
-          ></circle-icons>
-          <p class="desc-text">
-            کلاس های زنده تصویری و تعاملی؛ تک‌نفره و گروهی
-          </p>
-        </div>
-      </div>
-    </div>
     <div class="left-section col-6">
       <img :src="introImg" alt="" class="main-img" />
     </div>
+  <div class="right-section col-5" dir="rtl">
+    <h1 class="heading-primary">
+      آموزش آنلاین زبان در اُتیچر
+      <br />
+
+      <mark class="highlighted"> همیشه و همه‌جا </mark>
+      ، با استادی که دوست داری
+    </h1>
+    <div class="description">
+      <p class="description-text">
+        همسوترین استاد با اهداف و نیازهایت را از بین صدها استاد ارزیابی‌شده،
+        انتخاب کن و در زمان‌های دلخواه، در کلاس زبان آنلاین شرکت کن
+      </p>
+    </div>
+    <main-button class="main-btn">اولین جلسه را مهمان ما باش!</main-button>
+    <div class="desc-container">
+      <div class="first-desc d-flex">
+        <circle-icons
+          :iconUrl="magnifierIcon"
+          :bgColor="'#20b2ff80'"
+        ></circle-icons>
+        <p class="desc-text">
+          جستجو و یافتن سریع استاد با فیلترهای متنوع
+        </p>
+      </div>
+      <div class="second-desc d-flex">
+        <circle-icons
+          :iconUrl="playIcon"
+          :bgColor="'#20b2ff80'"
+        ></circle-icons>
+        <p class="desc-text">
+          کلاس های زنده تصویری و تعاملی؛ تک‌نفره و گروهی
+        </p>
+      </div>
+    </div>
+  </div>
   </section>
 </template>
 <script>
@@ -58,10 +58,9 @@ export default {
 <style scoped>
 * {
   margin-left: 1rem;
-  direction: rtl;
 }
 .main-container {
-  margin: 8rem;
+  margin-top: 8rem;
 }
 .heading-primary {
   margin-bottom: 3rem;
