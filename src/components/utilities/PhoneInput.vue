@@ -10,6 +10,8 @@
       id="phone-number"
       @focusout="removeFocusClass"
       @focus="addFocusClass"
+      v-model="number"
+      @input="setNumber"
     />
   </form>
 </template>
@@ -18,7 +20,8 @@
 export default {
   data() {
     return {
-        
+      // bind the input with number
+      number: "",
     };
   },
   methods: {
@@ -27,6 +30,10 @@ export default {
     },
     removeFocusClass() {
       this.$.refs.inputLabel.classList.remove("focused");
+    },
+    setNumber() {
+      // send the number to setPhoneNumber action
+      this.$store.dispatch("setPhoneNumber", this.number);
     },
   },
 };
