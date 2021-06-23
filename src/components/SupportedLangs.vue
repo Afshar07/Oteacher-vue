@@ -1,5 +1,5 @@
 <template>
-  <div class="country-container d-flex flex-column align-items-center" dir="rtl">
+  <div class="country-container d-flex flex-column align-items-center col-12">
     <img :src="flagImg" alt="" class="country-flag" />
     <p class="country-name">{{ name }}</p>
   </div>
@@ -16,8 +16,8 @@ export default {
 </script>
 <style scoped>
 .country-container {
-  margin-left: 4rem;
-  width: 10rem;
+  margin-left: 2rem;
+  width: 12rem;
   border-radius: 10px;
   transition: all 0.3s;
 }
