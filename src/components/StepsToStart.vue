@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container d-flex flex-column mb-5">
+  <div class="main-container d-flex flex-column mb-5 me-0">
     <div class="title d-flex">
       <circle-icons :iconUrl="iconUrlMade" :bgColor="bgColor"></circle-icons>
       <h4 class="primary-heading me-3 mt-2">
