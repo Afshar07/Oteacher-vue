@@ -9,7 +9,12 @@
         class="title d-flex align-items-center justify-content-between w-100"
       >
         <h2>ثبت نام در اُتیچر</h2>
-        <img :src="closeIcon" alt="close icon" />
+        <img
+          :src="closeIcon"
+          alt="close icon"
+          class="close-icon"
+          @click="redirectHome"
+        />
       </div>
       <input type="text" class="w-75" />
     </div>
@@ -23,6 +28,11 @@ export default {
       logoUrl: require("../../assets/logo-signup.png"),
       closeIcon: require("../../assets/close.svg"),
     };
+  },
+  methods: {
+    redirectHome() {
+      this.$router.push("/");
+    },
   },
 };
 </script>
@@ -42,5 +52,8 @@ export default {
 }
 .title {
   padding: 1rem;
+}
+.close-icon {
+  cursor: pointer;
 }
 </style>
