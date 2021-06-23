@@ -4,7 +4,9 @@
       <div class="header__nav--left">
         <img :src="phoneImg" alt="blue phone" class="blue-phone" />
         <div class="header__nav--btns">
-          <the-button class="signup-btn">ثبت نام</the-button>
+          <the-button class="signup-btn" @click="redirectRegister"
+            >ثبت نام</the-button
+          >
           <the-button class="login-btn">ورود</the-button>
         </div>
       </div>
@@ -21,7 +23,12 @@
         </div>
         <a href="#" class="nav-links">جذب استاد</a>
         <a href="#" class="nav-links">خدمت سازمانی</a>
-        <img :src="logoImg" alt="Oteacher Logo" class="main-logo" />
+        <img
+          :src="logoImg"
+          alt="Oteacher Logo"
+          class="main-logo"
+          @click="redirectHome"
+        />
       </div>
     </nav>
   </header>
@@ -37,7 +44,14 @@ export default {
       logoImg: require("../assets/oteacher-logo.png"),
     };
   },
-  methods: {},
+  methods: {
+    redirectRegister() {
+      this.$router.push("/register");
+    },
+    redirectHome() {
+      this.$router.push("/");
+    },
+  },
 };
 </script>
 <style scoped>
