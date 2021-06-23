@@ -57,7 +57,7 @@ export default {
   cursor: text;
 }
 .focused {
-  transform: translateY(-1rem) scale(0.9) !important;
+  transform: translateY(-0.8rem) scale(0.9) !important;
   color: #5592e9;
 }
 </style>
