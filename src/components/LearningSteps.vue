@@ -1,6 +1,9 @@
 <template>
-  <div class="learning-container d-flex">
-    <div class="left-section col-md-5 col-sm-12 me-5" dir="rtl">
+  <div class="learning-container d-lg-flex col-md-12 col-lg-12">
+    <div
+      class="left-section col-md-12 col-lg-5 col-sm-12 d-md-flex flex-md-column align-items-md-center"
+      dir="rtl"
+    >
       <h1 class="heading-primary">
         <mark class="highlighted">یادگیری آنلاین زبان </mark>
         <br />
@@ -8,7 +11,7 @@
           با سه گام کوتاه آغاز می‌شود
         </span>
       </h1>
-      <div class="three-steps-container mt-5">
+      <div class="three-steps-container mt-5 col-md-12 align-items-md-center d-md-flex flex-md-column ">
         <steps-to-start
           v-for="step in stepsData"
           :key="step.id"
@@ -19,7 +22,7 @@
         ></steps-to-start>
       </div>
     </div>
-    <div class="right-section col-md-6 me-5">
+    <div class="right-section col-md-9 col-lg-6 me-5">
       <div class="teacher-name">
         <teachers-name :img="teacher1Pic" :name="teacher1Name"></teachers-name>
         <teachers-name :img="teacher2Pic" :name="teacher2Name"></teachers-name>
@@ -59,9 +62,6 @@ export default {
 };
 </script>
 <style scoped>
-.learning-container {
-  margin: 4rem;
-}
 .right-section {
   height: 100vh;
   background: url("../assets/orbit.svg") no-repeat 20rem 10rem;
