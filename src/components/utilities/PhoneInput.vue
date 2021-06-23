@@ -17,7 +17,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+        
+    };
   },
   methods: {
     addFocusClass() {
@@ -36,16 +38,19 @@ export default {
 .phone-number-input {
   height: 4rem;
   outline: none;
+  padding: none;
+  direction: ltr;
 }
 .phone-label {
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.3rem;
   right: 0.8rem;
   font-size: 1.2rem;
   transition: all 0.5s;
   cursor: text;
 }
 .focused {
-  transform: translateY(-1.2rem) scale(0.8) !important;
+  transform: translateY(-1rem) scale(0.9) !important;
+  color: #5592e9;
 }
 </style>
