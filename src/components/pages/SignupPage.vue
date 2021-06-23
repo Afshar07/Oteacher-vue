@@ -16,13 +16,15 @@
           @click="redirectHome"
         />
       </div>
-      <input type="text" class="w-75" />
+      <phone-input class="w-75"></phone-input>
     </div>
   </div>
 </template>
 
 <script>
+import PhoneInput from "../utilities/PhoneInput.vue";
 export default {
+  components: { PhoneInput },
   data() {
     return {
       logoUrl: require("../../assets/logo-signup.png"),
