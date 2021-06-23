@@ -1,9 +1,9 @@
 <template>
-  <section class="main-container d-flex">
-    <div class="left-section col-6">
+  <section class="main-container d-lg-flex d-md-flex d-sm-block">
+    <div class="left-section col-md-6 col-sm-12">
       <img :src="introImg" alt="" class="main-img" />
     </div>
-  <div class="right-section col-5" dir="rtl">
+  <div class="right-section col-md-5 col-sm-12" dir="rtl">
     <h1 class="heading-primary">
       آموزش آنلاین زبان در اُتیچر
       <br />
@@ -61,6 +61,9 @@ export default {
 }
 .main-container {
   margin-top: 8rem;
+}
+.right-section {
+  padding-right: 3rem;
 }
 .heading-primary {
   margin-bottom: 3rem;
