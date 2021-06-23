@@ -1,5 +1,8 @@
 <template>
-  <the-header class="header-nav m-0" :class="stickyNav"></the-header>
+  <the-header
+    class="header-nav m-0 col-12 col-md-10 w-100 col-lg-12"
+    :class="stickyNav"
+  ></the-header>
   <router-view></router-view>
 </template>
 
@@ -67,6 +70,7 @@ html {
 body {
   box-sizing: border-box;
   height: 100%;
+  overflow-x: hidden !important;
 }
 .header-nav {
   margin-bottom: 10rem;
