@@ -4,10 +4,10 @@
       <div class="header__nav--left">
         <img :src="phoneImg" alt="blue phone" class="blue-phone" />
         <div class="header__nav--btns">
-          <the-button class="signup-btn" @click="redirectRegister"
-            >ثبت نام</the-button
+          <main-button class="signup-btn" @click="redirectRegister"
+            >ثبت نام</main-button
           >
-          <the-button class="login-btn">ورود</the-button>
+          <main-button class="login-btn">ورود</main-button>
         </div>
       </div>
       <div class="header__nav--right">
@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import TheButton from "./utilities/MainButton.vue";
+import MainButton from "./utilities/MainButton.vue";
 export default {
-  components: { TheButton },
+  components: { MainButton },
   data() {
     return {
       phoneImg: require("../assets/blue-phone.svg"),
